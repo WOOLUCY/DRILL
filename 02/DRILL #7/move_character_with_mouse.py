@@ -69,3 +69,4 @@ while running:
     elif cur_y - y < 0:
         y -= 3
 close_canvas()
+
