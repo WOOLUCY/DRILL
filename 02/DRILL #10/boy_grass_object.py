@@ -21,6 +21,8 @@ class Ball:
         else:
             self.dist = 800 - 63
 
+
+
     def update(self):
         if self.y >= 73 and not self.IsSmall:
             self.y -= self.dist / self.velocity
