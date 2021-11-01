@@ -89,3 +89,4 @@ while running:
 
 # finalization code
 close_canvas()
+
