@@ -28,6 +28,7 @@ class IdleState:
         elif event == LEFT_UP:
             boy.velocity += 1
         boy.timer = 50
+        boy.fv = 0
         # boy의 dir을 건들이면 안된다
 
     def exit(boy, event):
@@ -57,6 +58,7 @@ class RunState:
         elif event == LEFT_UP:
             boy.velocity += 1
         boy.dir = boy.velocity
+        boy.fv = boy.velocity * 3
 
     def exit(boy, event):
         pass
@@ -108,6 +110,7 @@ class DashState:
         elif event == LEFT_UP:
             boy.velocity += 1
         boy.dir = boy.velocity
+        boy.fv = boy.velocity * 10
         boy.timer = 50
 
     def exit(boy, event):
@@ -155,6 +158,7 @@ class Boy:
         self.image = load_image('animation_sheet.png')
         self.dir = 1
         self.velocity = 0
+        self.fv = 0
         self.frame = 0
         self.timer = 0
         self.event_que = []
@@ -185,7 +189,7 @@ class Boy:
 
     def draw(self):
         self.cur_state.draw(self)
-        # debug_print('Velocity: ' + str(self.velocity) + '   Dir: ' + str(self.dir))
+        debug_print('Velocity: ' + str(self.fv) + '   Dir: ' + str(self.dir))
         pass
 
 
