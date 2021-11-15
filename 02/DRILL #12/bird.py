@@ -17,6 +17,7 @@ FRAMES_PER_ACTION = 8
 
 class Bird:
     spr = None
+
     def __init__(self, x, y, velocity = 0):
         self.x, self.y, self.velocity = x, y, velocity
         self.spr_w, self.spr_h = 100, 100
