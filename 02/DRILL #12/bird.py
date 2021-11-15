@@ -43,5 +43,5 @@ class Bird:
         else:
             # self.spr.clip_draw(int(self.frame) * self.spr_w, 0, self.spr_w, self.spr_h, self.x, self.y)
             self.spr.clip_composite_draw(int(self.frame) * self.spr_w, 0, self.spr_w, self.spr_h, 0, 'h', self.x, self.y, self.spr_w, self.spr_h)
-        debug_print('Velocity :' + str(self.velocity) + '   Dir :' + str(self.dir))
+        # debug_print('Velocity :' + str(self.velocity) + '   Dir :' + str(self.dir))
 

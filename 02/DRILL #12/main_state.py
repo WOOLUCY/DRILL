@@ -16,12 +16,7 @@ name = "MainState"
 
 boy = None
 grass = None
-bird1 = None
-bird2 = None
-bird3 = None
-bird4 = None
-bird5 = None
-
+birds = []
 balls = []
 big_balls = []
 
@@ -42,19 +37,9 @@ def enter():
     grass = Grass()
     game_world.add_object(grass, 0)
 
-    global bird1, bird2, bird3, bird4, bird5
-    bird1 = Bird(randint(100, 1500), randint(200, 400))
-    bird2 = Bird(randint(100, 1500), randint(200, 400))
-    bird3 = Bird(randint(100, 1500), randint(200, 400))
-    bird4 = Bird(randint(100, 1500), randint(200, 400))
-    bird5 = Bird(randint(100, 1500), randint(200, 400))
-
-
-    game_world.add_object(bird1, 1)
-    game_world.add_object(bird2, 1)
-    game_world.add_object(bird3, 1)
-    game_world.add_object(bird4, 1)
-    game_world.add_object(bird5, 1)
+    global birds
+    birds = [Bird(randint(100, 1500), randint(200, 500)) for i in range(5)]
+    game_world.add_objects(birds, 1)
 
     # fill here for balls
 
