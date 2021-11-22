@@ -84,10 +84,12 @@ def update():
         if collide(ball, boy):
             balls.remove(ball)
             game_world.remove_object(ball)
+
         if collide(ball, brick) and ball.y > brick.y:
             ball.stop()
             ball.onBrick = True
             ball.get_speed(brick.speed)
+
         for another_ball in balls.copy():
             if collide(ball, another_ball) and another_ball.onBrick == True:
                 ball.stop()
